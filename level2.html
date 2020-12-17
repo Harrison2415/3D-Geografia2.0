@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+	<title>Nível 2</title>
+		
+	<link href="style.css" rel="stylesheet">
+		
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,900;1,300;1,900&display=swap" rel="stylesheet">
+		
+	<meta property="og:url" content="https://codepen.io/hrtzt/details/NPZKRN">
+		
+	<meta property="og:image" content="https://pbs.twimg.com/media/CCNJN_XUMAAJSzU.jpg:large">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+	<script src="https://kit.fontawesome.com/c8fd1cfcb7.js" crossorigin="anonymous"></script>
+	
+	<link rel="stylesheet" href="./style.css">
+	
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,900;1,300;1,900&display=swap" rel="stylesheet">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+	<script>
+
+        function teste()
+        {
+            var coordenada;
+
+            coordenada = document.getElementById("box-coordenada").value;
+            //alert(coordenada);
+           /* if(coordenada=='A'||coordenada=='a')
+            {
+                //alert("Escolhida a coordenada A");
+                window.location="acertou1.html";
+            }
+            else if(coordenada=='B')
+                alert("Escolhida a coordenada B");*/
+			if(coordenada=='C')
+			{
+				window.location="acertou2.html"
+				//alert("Escolhida a coordenada C")
+			}
+            else
+                //alert("Coordenada invalida");
+                window.location="errou2.html"
+		}
+	</script>
+
+	</head>
+
+	<body>
+	<!-- Section 1 -->
+  <section class="section-1">
+    <div class="cards-container">
+        <div class="card" id="card2">
+            
+            <h1 class="card-name">Nível 2</h1>
+            <h4 class="text-description-lvl1">
+                Evite o ataque alienígena informando as coordenadas em um mapa 3D
+			</h4>
+		</div>            
+	</div>
+		
+	<section class="teste3d">
+		<div id="viewport"></div>                          
+	</section>	                 
+        
+		<div class="caixa-texto">
+			<label id="texto-coordenada">
+				Informe qual o ponto que remete à posição 
+				<br> 
+				de latitude 20°NORTE e longitude 40°LESTE
+			</label>                        
+			<input type="text" id="box-coordenada"><br><br>
+		</div>                    
+		<button class="btn-enviar" onclick="teste()">Enviar</button>   
+	</section> 
+
+<!-- Section 2 -->
+<section class="section-2">
+    <div class="logo-puc">
+        <img id="logo-puc" src="./images/puc.png" alt="puc minas">
+    </div>
+    <div class="logo-cepoc">
+        <img id="logo-cepoc" src="./images/cepoc.png" alt="cepoc">
+    </div>                      
+</section>
+<!-- End of Section 2 -->
+
+<script src="./tools/three.js">
+	// Inclui a biblioteca gráfica ThreeJS
+	</script>
+
+	<script src="./tools/GLTFLoader.js" type="module">
+	// Inclui a biblioteca para carregar GLTF
+	</script>
+
+	<script src="./tools/OrbitControls.js" type="module"></script>
+
+	<script src="app.js" type="module">
+	// Inclui arquivo com a aplicação
+	</script>
+
+	<script src="tools/gsap.min.js">
+	// Inclui API para criação de interpolação de valores
+	</script>
+
+	</body>
+</html>

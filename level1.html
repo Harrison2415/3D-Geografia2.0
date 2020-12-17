@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nível 1</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script>
+
+        function teste()
+        {
+            var coordenada;
+
+            coordenada = document.getElementById("box-coordenada").value;
+            //alert(coordenada);
+            if(coordenada=='A'||coordenada=='a')
+            {
+                //alert("Escolhida a coordenada A");
+                window.location="acertou1.html";
+            }
+            /*else if(coordenada=='B')
+                alert("Escolhida a coordenada B");
+            else if(coordenada=='C')
+                alert("Escolhida a coordenada C")*/
+            else
+                //alert("Coordenada invalida");
+                window.location="errou1.html"
+        }
+/*
+        function gerar(){
+            var cv = document.getElementById("cnv");
+            var ctx = cv.getContext("2d");
+            var img = new Image();
+
+            var myPix = new Array("images/1.png","images/2.png","images/3.png","images/4.png",
+            "images/5.png","images/6.png");
+
+            var randomNum = Math.floor(Math.random() * myPix.length);
+
+            img.src=myPix[randomNum];
+
+            ctx.drawImage(img, 0, 0);
+        }*/
+        
+    </script>
+</head>
+<body>
+
+        <!-- Section 1 -->
+        <section class="section-1">
+            <div class="cards-container">
+                <div class="card" id="card1">
+                    
+                    <h1 class="card-name">Nível 1</h1>
+                    <h4 class="text-description-lvl1">
+                        Evite o ataque alienígena informando as coordenadas em um mapa 2D
+                     </h4>
+                    
+                </div>            
+                
+               <img id="cnv" src="images/MapaFinal2D.png" class="mapa-2d">
+                <!--
+                 <canvas id="cnv" class="mapa-2d" width="4000" height="2100">                  
+                 </canvas>
+               <button onclick="gerar()">Gerar</button> 
+                -->
+                <div class="caixa-texto"></div>
+                    <label id="texto-coordenada">
+                        Informe qual o ponto que remete à posição 
+                        <br> 
+                        de latitude <span id="X"></span> 20°SUL e longitude <span id="Y"></span>60°OESTE
+                    </label>                        
+                    <input type="text" id="box-coordenada"><br><br>
+                </div>                    
+                <button class="btn-enviar" onclick="teste()">Enviar</button> 
+            </div> 
+                                
+        </section class="section-3">
+    
+        <!-- Section 2 -->
+        <section class="section-2">
+            <div class="logo-puc">
+                <img id="logo-puc" src="./images/puc.png" alt="puc minas">
+            </div>
+            <div class="logo-cepoc">
+                <img id="logo-cepoc" src="./images/cepoc.png" alt="cepoc">
+            </div>                      
+        </section>
+        <!-- End of Section 2 -->
+</body>
+</html>
